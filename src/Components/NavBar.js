@@ -1,15 +1,16 @@
 import Link from "next/link";
 
-const NavBar = () => {
+const NavBar = ({ handleScrollAboutMe, handleScrollFeatures }) => {
+
     return (
-        <header className="grid grid-cols-3 fixed w-full items-center px-5 p-3 z-20 ">
-            <div>
-                <p className="text-white fond-semibold text-3xl mx-4">A<span className="text-red-600">V</span></p>
+        <header className="grid grid-cols-3 fixed w-full items-center px-5 p-3 z-20 bg-black">
+            <div className="font-extrabold">
+                <p className="text-white text-4xl mx-4">A<span className="text-red-600">V</span></p>
             </div>
             <div className="text-white font-semibold">
                 <ul className="flex justify-around">
-                    <li className="mx-4 hover:text-red-600 cursor-pointer transition duration-200">About Me</li>
-                    <li className="mx-4 hover:text-red-600 cursor-pointer transition duration-200">Features</li>
+                    <li onClick={handleScrollAboutMe} className="mx-4 hover:text-red-600 cursor-pointer transition duration-200">About Me</li>
+                    <li onClick={handleScrollFeatures} className="mx-4 hover:text-red-600 cursor-pointer transition duration-200">Features</li>
                     <li className="mx-4 hover:text-red-600 cursor-pointer transition duration-200">Projects</li>
                     <li className="mx-4 hover:text-red-600 cursor-pointer transition duration-200">Contact</li>
                 </ul>
