@@ -15,11 +15,14 @@ import Express from '../../public/Icons/express.png';
 import Mongo from '../../public/Icons/mongo.png';
 import Tailwind from '../../public/Icons/tailwind.png';
 import Projects from '@/Components/Projects';
+import Contact from '@/Components/Contact';
+import Footer from '@/Components/Footer';
 
 export default function Home() {
     const sectionAboutMe = useRef(null);
     const sectionFeatures = useRef(null);
     const sectionProjects = useRef(null);
+    const sectionContact = useRef(null);
     const [showMenu, setShowMenu] = useState(false);
     const [showNavbar, setShowNavbar] = useState(true);
 
@@ -42,6 +45,13 @@ export default function Home() {
             behavior: 'smooth',
         });
     };
+    const handleScrollContacts = () => {
+        setShowMenu(false);
+        sectionContact.current.scrollIntoView({
+            behavior: 'smooth',
+        });
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.pageYOffset;
@@ -57,13 +67,14 @@ export default function Home() {
 
     return (
         <>
-            <main className="flex flex-col min-h-screen">
+            <main className="flex flex-col h-screen">
                 {showNavbar && (
                     <NavBar showMenu={showMenu}
                         setShowMenu={setShowMenu}
                         handleScrollAboutMe={handleScrollAboutMe}
                         handleScrollFeatures={handleScrollFeatures}
                         handleScrollProjects={handleScrollProjects}
+                        handleScrollContacts={handleScrollContacts}
                     />
                 )}
                 <div className="flex flex-col justify-center items-center flex-grow z-10">
@@ -87,7 +98,7 @@ export default function Home() {
                     </p>
                 </div>
             </section>
-            <section className='grid place-items-center p-5' ref={sectionFeatures}>
+            <section className='grid place-items-center mx-auto' ref={sectionFeatures}>
                 <div className='text-neutral-100 text-center'>
                     <div className='mb-10 text-white'>
                         <h2 className='text-5xl font-semibold'>Features</h2>
@@ -156,9 +167,13 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className='py-3 my-5' ref={sectionProjects} >
+            <section className='py-3 px-3 mt-16 mb-2' ref={sectionProjects} >
                 <Projects />
             </section>
+            <section className='py-3 px-6 my-5' ref={sectionContact} >
+                <Contact />
+            </section>
+                <Footer/>
         </>
     )
 }

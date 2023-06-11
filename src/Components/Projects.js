@@ -5,11 +5,11 @@ import ProjectCards from './ProjectCards';
 
 const Projects = () => {
     return (
-        <div className="grid place-items-center p-2">
+        <div className="grid place-items-center justify-center">
             <div className='mb-10 text-white text-center'>
                 <h2 className='text-5xl font-semibold'>Projects</h2>
             </div>
-            <div className='px-6'>
+            <div className='px-3'>
                 <ProjectCards
                     title={'Ecommerce'}
                     description={`I created an ecommerce platform with shopping cart functionality, 

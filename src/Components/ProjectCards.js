@@ -7,7 +7,7 @@ import Demo from '../../public/Icons/demo.png';
 
 const ProjectCards = ({ image, title, description }) => {
     return (
-        <div className="bg-neutral-800 rounded-md my-5 p-2 grid lg:grid-cols-7 lg:gap-7 gap-3 text-center lg:text-start">
+        <div className="bg-neutral-800 rounded-md my-5 p-2 py-4 grid lg:grid-cols-7 lg:gap-7 gap-3 text-center lg:text-start">
             <div className='col-span-4'>
                 <Image src={image} width={650} height={650} alt="Ecommerce Project" className='mx-auto'/>
             </div>
@@ -19,7 +19,7 @@ const ProjectCards = ({ image, title, description }) => {
                         <p className=''>Demo</p>
                         <Image src={Demo} width={25} height={25} alt='Demo' />
                     </Link>
-                    <Link href={'#'} className='flex gap-3 bg-red-700 rounded px-10 py-3 justify-center'>
+                    <Link href={'https://github.com/ArielValdes00/ecommerce-funkos'} className='flex gap-3 bg-red-700 rounded px-10 py-3 justify-center' target="_blank" rel="noopener noreferrer">
                         <p className=''>GitHub</p>
                         <Image src={GitHub} width={25} height={25} alt='GitHub' />
                     </Link>

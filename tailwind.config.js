@@ -8,6 +8,9 @@ module.exports = {
             lineHeight: {
                 'loose': '1.65',
             },
+            colors: {
+                black: '#111111',
+            },
         },
     },
     plugins: [],
