@@ -1,64 +1,64 @@
 export const iconsProject = [{
-    next: "icons/next.png",
-    tailwind: "icons/tailwind.png",
-    node: "icons/nodejs.png",
-    express: "icons/express.png",
-    mysql: "icons/mysql.png",
-    mongo: "icons/mongo.png"
+    next: "Icons/next.png",
+    tailwind: "Icons/tailwind.png",
+    node: "Icons/nodejs.png",
+    express: "Icons/express.png",
+    mysql: "Icons/mysql.png",
+    mongo: "Icons/mongo.png"
 }]
 
 export const icons = [
     {
       name: 'HTML',
-      image: 'icons/html-5.png'
+      image: 'Icons/html-5.png'
     },
     {
       name: 'CSS',
-      image: 'icons/css-3.png'
+      image: 'Icons/css-3.png'
     },
     {
       name: 'JavaScript',
-      image: 'icons/js.png'
+      image: 'Icons/js.png'
     },
     {
       name: 'React',
-      image: 'icons/react.png'
+      image: 'Icons/react.png'
     },
     {
       name: 'Bootstrap',
-      image: 'icons/bootstrap.png'
+      image: 'Icons/bootstrap.png'
     },
     {
       name: 'Git',
-      image: 'icons/git.png'
+      image: 'Icons/git.png'
     },
     {
       name: 'GitHub',
-      image: 'icons/github-dark.png'
+      image: 'Icons/github-dark.png'
     },
     {
       name: 'Next.js',
-      image: 'icons/next.png'
+      image: 'Icons/next.png'
     },
     {
       name: 'Tailwind',
-      image: 'icons/tailwind.png'
+      image: 'Icons/tailwind.png'
     },
     {
       name: 'Node.js',
-      image: 'icons/nodejs.png'
+      image: 'Icons/nodejs.png'
     },
     {
       name: 'Express',
-      image: 'icons/express.png'
+      image: 'Icons/express.png'
     },
     {
       name: 'MySQL',
-      image: 'icons/mysql.png'
+      image: 'Icons/mysql.png'
     },
     {
       name: 'MongoDB',
-      image: 'icons/mongo.png'
+      image: 'Icons/mongo.png'
     }
   ];
   
