@@ -33,22 +33,54 @@ const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatur
     }, []);
 
     return (
-        <header className="grid grid-cols-4 fixed w-full items-center px-5 p-3 z-20 bg-black">
+        <header className="grid grid-cols-4 fixed w-full items-center lg:px-5 p-3 z-40 bg-black">
             <div className="font-extrabold">
-                <p className="text-white text-4xl mx-4">A<span className="text-red-700">V</span></p>
+                <p className="text-white text-4xl mx-4">
+                    A<span className="text-red-700">V</span>
+                </p>
             </div>
             <div className="text-white font-semibold justify-self-end col-span-3">
                 <div className="lg:hidden cursor-pointer me-2">
-                    <Image src={showMenu ? Close : Menu} height={30} width={30} alt='menu' onClick={handleShowMenu} />
+                    <Image
+                        src={showMenu ? Close : Menu}
+                        height={30}
+                        width={30}
+                        alt="menu"
+                        onClick={handleShowMenu}
+                    />
                 </div>
-                <ul className={`${showMenu ? "block absolute bg-red-700 left-0 top-[63px] h-screen w-full pb-20 z-50" : "hidden"} flex flex-col justify-center items-center text-gray-100 gap-10 text-4xl lg:text-lg lg:flex lg:flex-row`}>
-                    <li onClick={handleScrollAboutMe} className="lg:hover:text-red-700 cursor-pointer transition duration-200">About Me</li>
-                    <li onClick={handleScrollFeatures} className="lg:hover:text-red-700 cursor-pointer transition duration-200">Features</li>
-                    <li onClick={handleScrollProjects} className="lg:hover:text-red-700 cursor-pointer transition duration-200">Projects</li>
-                    <li onClick={handleScrollContacts}className="lg:hover:text-red-700 cursor-pointer transition duration-200">Contact</li>
-                    <DownloadCV/>
+                <ul
+                    className={`${showMenu
+                            ? "block absolute bg-red-700 left-0 top-[63px] h-screen w-full pb-20 menu-open"
+                            : "hidden"
+                        } flex flex-col justify-center items-center text-white gap-10 text-4xl lg:text-lg lg:flex lg:flex-row`}
+                >
+                    <li
+                        onClick={handleScrollAboutMe}
+                        className="lg:hover:text-red-700 cursor-pointer transition duration-200"
+                    >
+                        About Me
+                    </li>
+                    <li
+                        onClick={handleScrollFeatures}
+                        className="lg:hover:text-red-700 cursor-pointer transition duration-200"
+                    >
+                        Features
+                    </li>
+                    <li
+                        onClick={handleScrollProjects}
+                        className="lg:hover:text-red-700 cursor-pointer transition duration-200"
+                    >
+                        Projects
+                    </li>
+                    <li
+                        onClick={handleScrollContacts}
+                        className="lg:hover:text-red-700 cursor-pointer transition duration-200"
+                    >
+                        Contact
+                    </li>
+                    <DownloadCV />
                 </ul>
-
             </div>
         </header>
     )
