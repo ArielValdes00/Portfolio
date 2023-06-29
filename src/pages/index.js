@@ -107,7 +107,7 @@ export default function Index() {
             <section className='py-3 px-3 my-16' ref={sectionProjects} >
                 <Projects />
             </section>
-            <section className='h-screen' ref={sectionContact} >
+            <section className='' ref={sectionContact} >
                 <Contact />
             </section>
             <Footer />
