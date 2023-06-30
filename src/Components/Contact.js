@@ -71,7 +71,7 @@ const Contact = () => {
                 <button type="submit" className="flex items-center gap-1 justify-center bg-red-700 w-full text-white rounded px-4 py-2">
                     {loading ? (
                         <>
-                            <Image src={Loader} height={20} width={20} alt='Loading' />
+                            <Image src={Loader} height={20} width={20} alt='Loading' loading="eager"/>
                             <span>Loading...</span>
                         </>
                     ) : (
@@ -86,7 +86,7 @@ const Contact = () => {
                     className="fixed top-1/2 left-1/2 rounded-lg transform -translate-x-1/2 -translate-y-1/2 bg-black shadow-lg"
                 >
                     <div className="p-5 text-center flex flex-col items-center gap-3">
-                        <Image src={Check} height={50} width={50} alt='Check' />
+                        <Image src={Check} height={50} width={50} alt='Check' loading="eager"/>
                         <h2 className='text-white text-lg'>¡Message sent successfully!</h2>
                     </div>
                 </motion.div>
