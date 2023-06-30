@@ -104,10 +104,10 @@ export default function Index() {
                     <Features />
                 </div>
             </section>
-            <section className='py-3 px-3 my-16' ref={sectionProjects} >
+            <section className='py-3 px-3' ref={sectionProjects} >
                 <Projects />
             </section>
-            <section className='' ref={sectionContact} >
+            <section data-aos="fade-right" data-aos-duration="1000" ref={sectionContact} >
                 <Contact />
             </section>
             <Footer />

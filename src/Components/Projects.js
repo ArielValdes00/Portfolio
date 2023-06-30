@@ -49,7 +49,7 @@ const Projects = () => {
                         ))}
                 />
                 <ProjectCards
-                    dataAos="fade-left"
+                    dataAos="fade-right"
                     title={'Chat App'}
                     description={`Built with a robust authentication system, my chat application provides 
                     users with a secure platform to connect and communicate. Upon login, users gain access 

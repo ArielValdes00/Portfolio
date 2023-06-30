@@ -51,7 +51,7 @@ const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatur
                 </div>
                 <ul
                     className={`${showMenu
-                            ? "block absolute bg-red-700 left-0 top-[63px] h-screen w-full pb-20 menu-open"
+                            ? "block absolute bg-neutral-800 left-0 top-[63px] h-screen w-full pb-20 menu-open"
                             : "hidden"
                         } flex flex-col justify-center items-center text-white gap-10 text-4xl lg:text-lg lg:flex lg:flex-row`}
                 >
