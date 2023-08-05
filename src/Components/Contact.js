@@ -36,8 +36,8 @@ const Contact = () => {
         setForm({ ...form, [e.target.name]: e.target.value });
     }
     return (
-        <div className='h-screen grid mx-5 items-center'>
-            <form ref={formRef} onSubmit={handleSubmit} className="bg-neutral-800 p-6 rounded-md lg:w-2/3 lg:mx-auto">
+        <div className='mx-auto w-[395px] md:w-[430px] lg:w-1/2'>
+            <form ref={formRef} onSubmit={handleSubmit} className="bg-neutral-800 p-6 rounded-md lg:mx-auto">
                 <div className='text-white text-center mb-10'>
                     <h2 className='text-5xl font-semibold'>Contact Me</h2>
                 </div>

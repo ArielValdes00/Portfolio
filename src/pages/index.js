@@ -86,7 +86,7 @@ export default function Index() {
                     </div>
                     <div className="text-center lg:w-[500px] h-full pt-8">
                         <h2 className="text-5xl font-semibold mb-5">About Me</h2>
-                        <p className="leading-loose text-gray-200">
+                        <p className="leading-loose max-w-md  text-gray-200">
                             I'm a self-taught full-stack web developer passionate about creating user-friendly and innovative 
                             web applications. With a focus on continuous learning, I stay updated with the latest technologies 
                             to deliver tailored solutions that drive results. By combining my front-end and back-end skills, 
@@ -104,10 +104,10 @@ export default function Index() {
                     <Features />
                 </div>
             </section>
-            <section className='py-3 px-3' ref={sectionProjects} >
+            <section className='py-3 px-5 mb-[140px]' ref={sectionProjects} >
                 <Projects />
             </section>
-            <section data-aos="fade-right" data-aos-duration="1000" ref={sectionContact} >
+            <section className='h-screen grid items-center' data-aos="fade-right" data-aos-duration="1000" ref={sectionContact} >
                 <Contact />
             </section>
             <Footer />

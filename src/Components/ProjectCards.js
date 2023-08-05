@@ -4,26 +4,33 @@ import Link from 'next/link';
 import GitHub from '../../public/Icons/github.png';
 import Demo from '../../public/Icons/demo.png';
 
-const ProjectCards = ({ image, title, description, map, dataAos }) => {
+const ProjectCards = ({ image, title, description, map, dataAos, repositoryLink, deployLink, dataAosDelay }) => {
     return (
-        <div className="bg-neutral-800 rounded-md my-5 p-2 py-4 grid lg:grid-cols-7 lg:gap-7 gap-3 text-center lg:text-start" data-aos={dataAos} data-aos-duration="1000">
-            <div className='col-span-4'>
-                <Image src={image} width={720} height={720} alt="Ecommerce Project" className='mx-auto' />
+        <div className="bg-neutral-800 rounded-lg pb-3 w-[395px] md:w-[430px] lg:w-[395]" data-aos={dataAos} data-aos-duration={"1000"} data-aos-delay={dataAosDelay}>
+            <div>
+                <Image src={image} width={800} height={800} alt="Ecommerce Project" className='w-full image-bg' />
             </div>
-            <div className="flex flex-col text-gray-100 col-span-3">
-                <h3 className="text-4xl font-bold text-white mb-4">{title}</h3>
-                <p className="text-gray-200 mx-auto lg:m-0 xl:pe-20 leading-loose md:w-4/5 lg:w-full">{description}</p>
-                <div>
+            <div className="flex flex-col text-gray-100 items-center">
+                <h3 className="text-2xl text-white font-semibold my-2">{title}</h3>
+                <p className="text-gray-200 text-sm px-4 max-w-sm lg:max-w-xs text-center">{description}</p>
+                <div className='py-4'>
                     {map}
                 </div>
-                <div className='flex gap-5 items-center lg:mt-auto lg:m-0 font-semibold mx-auto'>
-                    <Link href={'#'} className='px-10 py-3 rounded bg-red-700 flex gap-2 justify-center'>
+                <div className='flex items-center justify-center gap-3'>
+                    <Link href={deployLink}
+                        className='flex justify-center items-center rounded-md px-4 py-2 gap-2 text-sm bg-red-700 hover:bg-red-800'
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <p>Demo</p>
-                        <Image src={Demo} width={25} height={25} alt='Demo' />
+                        <Image src={Demo} width={19} height={19} alt='Demo' />
                     </Link>
-                    <Link href={'https://github.com/ArielValdes00/ecommerce-funkos'} className='flex gap-3 bg-red-700 rounded px-10 py-3 justify-center' target="_blank" rel="noopener noreferrer">
+                    <Link
+                        href={repositoryLink}
+                        className='flex justify-center items-center rounded-md px-4 py-2 gap-2 text-sm bg-red-700 hover:bg-red-800'
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <p>GitHub</p>
-                        <Image src={GitHub} width={25} height={25} alt='GitHub' />
+                        <Image src={GitHub} width={19} height={19} alt='GitHub' />
                     </Link>
                 </div>
             </div>

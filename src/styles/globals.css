@@ -5,6 +5,10 @@
 .menu-open {
     animation: slide-in 0.3s ease-in-out;
   }
+
+.image-bg{
+    height: 230px;
+  }
   
   @keyframes slide-in {
     from {
