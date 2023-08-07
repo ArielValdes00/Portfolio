@@ -10,7 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Features from '@/Components/Features';
 import Head from 'next/head';
-import GetInTouch from '@/Components/getInTouch';
+import GetInTouch from '@/Components/GetInTouch';
 
 
 export default function Index() {
