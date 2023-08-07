@@ -34,7 +34,7 @@ const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatur
     return (
         <header className="grid grid-cols-4 fixed w-full items-center lg:px-5 p-3 z-40 bg-black">
             <div>
-                <Image src={Logo} height={400} width={400} alt='Ariel Valdés' className='logo' />
+                <Image src={Logo} height={400} width={400} alt='Ariel Valdés' className='logo' loading='eager'/>
             </div>
             <div className="text-white font-semibold justify-self-end col-span-3">
                     <div className="menu-icon lg:hidden cursor-pointer me-2 mt-2" onClick={handleShowMenu}>
