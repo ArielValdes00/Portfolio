@@ -24,10 +24,10 @@ const Home = () => {
                 <p className="text-xl mb-5 text-center z-30">I am a full-stack web developer.</p>
                 <Image src={Stain} height={600} width={600} alt='Stain' className='absolute z-0 w-3/4 bottom-[26px] sm:bottom-[-40px] md:bottom-[-120px] md:left-[120px] md:w-[600px] ' />
                 <div className="flex justify-center gap-4 z-30">
-                    <Link href={"https://github.com/ArielValdes00"} target='_blank'>
+                    <Link href={"https://github.com/ArielValdes00"} target='_blank' className='transform hover:scale-105'>
                         <Image src={GitHub} height={30} width={36} alt="GitHub" />
                     </Link>
-                    <Link href={"#"}>
+                    <Link href={"#"} className='transform hover:scale-105'>
                         <Image src={Linkedin} height={30} width={36} alt="Linkedin" />
                     </Link>
                 </div>

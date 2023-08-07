@@ -1,6 +1,5 @@
 import DownloadCV from './DownloadCV';
-import Menu from '../../public/Icons/menu.png'
-import Close from '../../public/Icons/close.png'
+import Logo from '../../public/logo.png';
 import Image from "next/image";
 import { useEffect } from "react";
 
@@ -34,26 +33,20 @@ const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatur
 
     return (
         <header className="grid grid-cols-4 fixed w-full items-center lg:px-5 p-3 z-40 bg-black">
-            <div className="font-extrabold">
-                <p className="text-white text-4xl mx-4">
-                    A<span className="text-red-700">V</span>
-                </p>
+            <div>
+                <Image src={Logo} height={400} width={400} alt='Ariel Valdés' className='logo' />
             </div>
             <div className="text-white font-semibold justify-self-end col-span-3">
-                <div className="lg:hidden cursor-pointer me-2">
-                    <Image
-                        src={showMenu ? Close : Menu}
-                        height={30}
-                        width={30}
-                        alt="menu"
-                        onClick={handleShowMenu}
-                    />
-                </div>
+                    <div className="menu-icon lg:hidden cursor-pointer me-2 mt-2" onClick={handleShowMenu}>
+                        <div className={`menu-line line-1 ${showMenu ? 'line-1-cross' : ''}`}></div>
+                        <div className={`menu-line line-2 ${showMenu ? 'line-2-hidden' : ''}`}></div>
+                        <div className={`menu-line line-3 ${showMenu ? 'line-3-cross' : ''}`}></div>
+                    </div>
                 <ul
                     className={`${showMenu
-                            ? "block absolute bg-neutral-800 left-0 top-[63px] h-screen w-full pb-20 menu-open"
-                            : "hidden"
-                        } flex flex-col justify-center items-center text-white gap-10 text-4xl lg:text-lg lg:flex lg:flex-row`}
+                        ? "block absolute bg-neutral-800 left-0 top-[63px] h-screen w-full pb-20 menu-open"
+                        : "hidden"
+                        } flex flex-col justify-center items-center text-white gap-16 text-4xl lg:text-lg lg:flex lg:flex-row`}
                 >
                     <li
                         onClick={handleScrollAboutMe}
@@ -79,7 +72,7 @@ const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatur
                     >
                         Contact
                     </li>
-                    <DownloadCV />
+                    <DownloadCV className={"px-5 py-3 lg:px-4 lg:py-2"} />
                 </ul>
             </div>
         </header>

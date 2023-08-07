@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Ecomm from '../../public/Icons/ecommerce.png';
-import Ecommerce from '../../public/project-ecommerce.png';
+import Ecommerce from '../../public/bg-ecommerce.png';
 import QuizApp from '../../public/quiz-app-bg.png';
 import ProjectCards from './ProjectCards';
 import { iconsProject } from '@/icons-data';
@@ -16,9 +16,9 @@ const Projects = () => {
     return (
         <div>
             <div className='text-white text-center'>
-                <h2 className='text-5xl mb-9 font-semibold'>Projects</h2>
+                <h2 className='text-5xl mb-10 font-semibold'>Projects</h2>
             </div>
-            <div className='flex flex-col lg:flex-row justify-center items-center gap-4'>
+            <div className='flex flex-col lg:flex-row justify-center items-center gap-4 xl:gap-7'>
                 <ProjectCards
                     dataAosDelay={"100"}
                     dataAos={'fade-right'}

@@ -36,39 +36,36 @@ const Contact = () => {
         setForm({ ...form, [e.target.name]: e.target.value });
     }
     return (
-        <div className='mx-auto w-[395px] md:w-[430px] lg:w-1/2'>
-            <form ref={formRef} onSubmit={handleSubmit} className="bg-neutral-800 p-6 rounded-md lg:mx-auto">
-                <div className='text-white text-center mb-10'>
-                    <h2 className='text-5xl font-semibold'>Contact Me</h2>
-                </div>
-                <div className="mb-4 md:mb-6">
+        <div className='w-[350px] lg:ms-16'>
+            <form ref={formRef} onSubmit={handleSubmit} className="bg-neutral-800 px-5 py-4 rounded-md flex flex-col gap-2">
+                <div>
                     <label htmlFor="email" className="text-white block mb-2">Email</label>
                     <input
                         type="email"
                         onChange={handleChange}
-                        className="w-full bg-neutral-700 rounded px-4 py-2 text-white focus:border-black border-2 border-transparent outline-none"
+                        className="w-full bg-neutral-700 rounded px-4 py-1 text-white focus:border-black border-2 border-transparent outline-none"
                         name="user_email"
                     />
                 </div>
-                <div className="mb-4 md:mb-6">
+                <div>
                     <label htmlFor="subject" className="text-white block mb-2">Subject</label>
                     <input
                         type="text"
                         onChange={handleChange}
-                        className="w-full bg-neutral-700 rounded px-4 py-2 text-white focus:border-black border-2 border-transparent outline-none"
+                        className="w-full bg-neutral-700 rounded px-4 py-1 text-white focus:border-black border-2 border-transparent outline-none"
                         name="user_name"
                     />
                 </div>
-                <div className="mb-4 md:mb-6">
+                <div>
                     <label htmlFor="message" className="text-white block mb-2">Message</label>
                     <textarea onChange={handleChange}
-                        className="w-full bg-neutral-700 rounded px-4 py-2 text-white focus:border-black border-2 border-transparent outline-none"
-                        rows={5}
+                        className="w-full bg-neutral-700 rounded ps-2 py-1 text-white focus:border-black border-2 border-transparent outline-none"
+                        rows={4}
                         name="message"
                     >
                     </textarea>
                 </div>
-                <button type="submit" className="flex items-center gap-1 justify-center bg-red-700 w-full text-white rounded px-4 py-2">
+                <button type="submit" className="flex items-center gap-1 justify-center bg-red-700 hover:bg-red-800 w-full text-white rounded px-4 py-2">
                     {loading ? (
                         <>
                             <Image src={Loader} height={20} width={20} alt='Loading' loading="eager"/>

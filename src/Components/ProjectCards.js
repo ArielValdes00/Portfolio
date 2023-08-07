@@ -6,9 +6,9 @@ import Demo from '../../public/Icons/demo.png';
 
 const ProjectCards = ({ image, title, description, map, dataAos, repositoryLink, deployLink, dataAosDelay }) => {
     return (
-        <div className="bg-neutral-800 rounded-lg pb-3 w-[395px] md:w-[430px] lg:w-[395]" data-aos={dataAos} data-aos-duration={"1000"} data-aos-delay={dataAosDelay}>
+        <div className="bg-neutral-800 rounded-lg pb-3 md:w-[430px] lg:w-[365px]" data-aos={dataAos} data-aos-duration={"1000"} data-aos-delay={dataAosDelay}>
             <div>
-                <Image src={image} width={800} height={800} alt="Ecommerce Project" className='w-full image-bg' />
+                <Image src={image} width={2000} height={2000} alt="Ecommerce Project" className='w-full image-bg' />
             </div>
             <div className="flex flex-col text-gray-100 items-center">
                 <h3 className="text-2xl text-white font-semibold my-2">{title}</h3>
