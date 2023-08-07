@@ -23,12 +23,12 @@ const GetInTouch = () => {
             <div>
                 <CopyToClipboard text="ariel.jvaldes20@gmail.com" onCopy={handleCopy}>
                     <div className="flex items-center text-sm gap-3 mb-2 cursor-pointer">
-                        <Image src={Email} height={24} width={24} alt="Email" />
+                        <Image src={Email} height={24} width={24} alt="Email" loading='eager'/>
                         <p>{copied ? "Copied" : "ariel.jvaldes20@gmail.com"}</p>
                     </div>
                 </CopyToClipboard>
                 <div className='flex items-center text-sm gap-3'>
-                    <Image src={Location} height={24} width={24} alt='Location' />
+                    <Image src={Location} height={24} width={24} alt='Location' loading='eager'/>
                     <p>Buenos Aires, Argentina</p>
                 </div>
             </div>

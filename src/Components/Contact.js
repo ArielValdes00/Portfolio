@@ -39,7 +39,7 @@ const Contact = () => {
         <div className='w-[350px] lg:ms-16'>
             <form ref={formRef} onSubmit={handleSubmit} className="bg-neutral-800 px-5 py-4 rounded-md flex flex-col gap-2">
                 <div>
-                    <label htmlFor="email" className="text-white block mb-2">Email</label>
+                    <label htmlFor="user_email" className="text-white block mb-2">Email</label>
                     <input
                         type="email"
                         onChange={handleChange}
@@ -48,7 +48,7 @@ const Contact = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="subject" className="text-white block mb-2">Subject</label>
+                    <label htmlFor="user_name" className="text-white block mb-2">Subject</label>
                     <input
                         type="text"
                         onChange={handleChange}
