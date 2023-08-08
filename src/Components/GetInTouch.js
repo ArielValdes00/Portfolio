@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Linkedin from '../../public/Icons/linkedin.png';
 import GitHub from '../../public/Icons/github.png';
@@ -7,14 +7,15 @@ import Location from '../../public/Icons/location.png';
 import DownloadCV from './DownloadCV';
 import Link from 'next/link';
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const GetInTouch = () => {
-    const [copied, setCopied] = useState(false);
 
     const handleCopy = () => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 3000);
+        toast.success("Email copied to clipboard");
     };
+
     return (
         <main className='bg-black flex flex-col items-center lg:items-start gap-4 text-white mb-6'>
             <div>
@@ -23,12 +24,12 @@ const GetInTouch = () => {
             <div>
                 <CopyToClipboard text="ariel.jvaldes20@gmail.com" onCopy={handleCopy}>
                     <div className="flex items-center text-sm gap-3 mb-2 cursor-pointer">
-                        <Image src={Email} height={24} width={24} alt="Email" loading='eager'/>
-                        <p>{copied ? "Copied" : "ariel.jvaldes20@gmail.com"}</p>
+                        <Image src={Email} height={24} width={24} alt="Email" loading='eager' />
+                        <p>ariel.jvaldes20@gmail.com</p>
                     </div>
                 </CopyToClipboard>
                 <div className='flex items-center text-sm gap-3'>
-                    <Image src={Location} height={24} width={24} alt='Location' loading='eager'/>
+                    <Image src={Location} height={24} width={24} alt='Location' loading='eager' />
                     <p>Buenos Aires, Argentina</p>
                 </div>
             </div>
@@ -41,7 +42,18 @@ const GetInTouch = () => {
                     <Image src={GitHub} width={35} height={35} alt='GitHub' />
                 </Link>
             </div>
-
+            <ToastContainer
+                position="bottom-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </main>
     )
 }

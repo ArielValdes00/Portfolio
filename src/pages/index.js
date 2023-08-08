@@ -122,7 +122,7 @@ export default function Index() {
             <section className='py-3 mt-5 px-5 mb-[140px]' ref={sectionProjects} >
                 <Projects />
             </section>
-            <section className='h-screen flex flex-col lg:gap-[130px] lg:flex-row justify-center items-center' data-aos="fade-right" data-aos-duration="1000" ref={sectionContact} >
+            <section className='h-screen flex flex-col lg:gap-[130px] lg:flex-row justify-center items-center overflow-x-hidden' data-aos="fade-right" data-aos-duration="1000" ref={sectionContact} >
                 <GetInTouch />
                 <Contact />
             </section>

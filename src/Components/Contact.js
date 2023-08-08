@@ -2,12 +2,11 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Loader from '../../public/Icons/loader.gif';
 import Image from 'next/image';
-import Check from '../../public/Icons/tick.png';
-import { motion } from 'framer-motion';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
     const [loading, setLoading] = useState(false)
-    const [showModal, setShowModal] = useState(false)
     const [form, setForm] = useState({
         user_email: "",
         user_name: "",
@@ -19,16 +18,12 @@ const Contact = () => {
         e.preventDefault();
         setLoading(true)
         emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, formRef.current, process.env.NEXT_PUBLIC_PUBLIC_KEY)
-            .then((result) => {
+            .then(() => {
                 formRef.current.reset();
-                setLoading(false)
-                setShowModal(true)
-                setTimeout(() => {
-                    setShowModal(false);
-                }, 3000);
-                console.log(result.text);
+                setLoading(false)    
+                toast.success("Message sent successfully");
             }, (error) => {
-                console.log(error.text);
+                console.log(error);
             });
     };
 
@@ -45,6 +40,7 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-full bg-neutral-700 rounded px-4 py-1 text-white focus:border-black border-2 border-transparent outline-none"
                         name="user_email"
+                        id="user_email"
                     />
                 </div>
                 <div>
@@ -54,6 +50,7 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-full bg-neutral-700 rounded px-4 py-1 text-white focus:border-black border-2 border-transparent outline-none"
                         name="user_name"
+                        id="user_name"
                     />
                 </div>
                 <div>
@@ -62,6 +59,7 @@ const Contact = () => {
                         className="w-full bg-neutral-700 rounded ps-2 py-1 text-white focus:border-black border-2 border-transparent outline-none"
                         rows={4}
                         name="message"
+                        id="message"
                     >
                     </textarea>
                 </div>
@@ -76,18 +74,18 @@ const Contact = () => {
                     )}
                 </button>
             </form>
-            {showModal && (
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="fixed top-1/2 left-1/2 rounded-lg transform -translate-x-1/2 -translate-y-1/2 bg-black shadow-lg"
-                >
-                    <div className="p-5 text-center flex flex-col items-center gap-3">
-                        <Image src={Check} height={50} width={50} alt='Check' loading="eager"/>
-                        <h2 className='text-white text-lg'>¡Message sent successfully!</h2>
-                    </div>
-                </motion.div>
-            )}
+            <ToastContainer
+                position="bottom-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </div>
     )
 }
