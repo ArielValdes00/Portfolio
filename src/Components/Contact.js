@@ -2,10 +2,8 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Loader from '../../public/Icons/loader.gif';
 import Image from 'next/image';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
-const Contact = () => {
+const Contact = ({ toast }) => {
     const [loading, setLoading] = useState(false)
     const [form, setForm] = useState({
         user_email: "",
@@ -20,7 +18,7 @@ const Contact = () => {
         emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, formRef.current, process.env.NEXT_PUBLIC_PUBLIC_KEY)
             .then(() => {
                 formRef.current.reset();
-                setLoading(false)    
+                setLoading(false)
                 toast.success("Message sent successfully");
             }, (error) => {
                 console.log(error);
@@ -66,7 +64,7 @@ const Contact = () => {
                 <button type="submit" className="flex items-center gap-1 justify-center bg-red-700 hover:bg-red-800 w-full text-white rounded px-4 py-2">
                     {loading ? (
                         <>
-                            <Image src={Loader} height={20} width={20} alt='Loading' loading="eager"/>
+                            <Image src={Loader} height={20} width={20} alt='Loading' loading="eager" />
                             <span>Loading...</span>
                         </>
                     ) : (
@@ -74,18 +72,6 @@ const Contact = () => {
                     )}
                 </button>
             </form>
-            <ToastContainer
-                position="bottom-right"
-                autoClose={3000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="dark"
-            />
         </div>
     )
 }

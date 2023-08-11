@@ -7,10 +7,8 @@ import Location from '../../public/Icons/location.png';
 import DownloadCV from './DownloadCV';
 import Link from 'next/link';
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
-const GetInTouch = () => {
+const GetInTouch = ({ toast }) => {
 
     const handleCopy = () => {
         toast.success("Email copied to clipboard");
@@ -42,18 +40,6 @@ const GetInTouch = () => {
                     <Image src={GitHub} width={35} height={35} alt='GitHub' />
                 </Link>
             </div>
-            <ToastContainer
-                position="bottom-right"
-                autoClose={3000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="dark"
-            />
         </main>
     )
 }

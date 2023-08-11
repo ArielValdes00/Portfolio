@@ -11,7 +11,8 @@ import 'aos/dist/aos.css';
 import Features from '@/Components/Features';
 import Head from 'next/head';
 import GetInTouch from '@/Components/GetInTouch';
-
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Index() {
     const sectionAboutMe = useRef(null);
@@ -123,9 +124,19 @@ export default function Index() {
                 <Projects />
             </section>
             <section className='h-screen flex flex-col lg:gap-[130px] lg:flex-row justify-center items-center overflow-x-hidden' data-aos="fade-right" data-aos-duration="1000" ref={sectionContact} >
-                <GetInTouch />
-                <Contact />
+                <GetInTouch toast={toast}/>
+                <Contact toast={toast} />
             </section>
+            <ToastContainer
+                position="bottom-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                draggable
+                theme="dark"
+            />
         </>
     )
 }
