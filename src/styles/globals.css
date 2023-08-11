@@ -10,11 +10,16 @@
     height: 220px;
   }
 
-  .logo{
+.logo{
     background-size: cover;
     width: 60px;
     height: 40px;
-  }
+}
+
+.icons-img{
+    width: 55px;
+    height: 55px;
+}
 
 .menu-icon {
     display: flex;
@@ -48,7 +53,11 @@
 
   @media screen and (min-width: 1024px) {
     .image-bg {
-      height: 205px;
+        height: 205px;
+    }
+    .icons-img{
+        width: 65px;
+        height: 65px;
     }
   }
   
