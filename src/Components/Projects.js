@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Ecomm from '../../public/Icons/ecommerce.png';
+import ChatApp from '../../public/bg-chat-app.png';
 import Ecommerce from '../../public/bg-ecommerce.png';
 import QuizApp from '../../public/quiz-app-bg.png';
 import ProjectCards from './ProjectCards';
@@ -18,7 +18,7 @@ const Projects = () => {
             <div className='text-white text-center'>
                 <h2 className='text-5xl mb-10 font-semibold'>Projects</h2>
             </div>
-            <div className='flex flex-col lg:flex-row justify-center items-center gap-4 xl:gap-7'>
+            <div className='flex flex-col lg:flex-row justify-center items-center gap-4 xl:gap-7 xl:px-5'>
                 <ProjectCards
                     dataAosDelay={"100"}
                     dataAos={'fade-right'}
@@ -55,7 +55,7 @@ const Projects = () => {
                     title={'Chat App'}
                     description={`My chat app provides a secure platform for real-time communication. It offers seamless,
                      dynamic conversations using Socket.io for an engaging user experience.`}
-                    image={Ecomm}
+                    image={ChatApp}
                     repositoryLink={'https://github.com/ArielValdes00/Chat-App'}
                     deployLink={'https://chat-app-ten-topaz.vercel.app'}
                     map={

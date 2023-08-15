@@ -6,13 +6,13 @@ import Demo from '../../public/Icons/demo.png';
 
 const ProjectCards = ({ image, title, description, map, dataAos, repositoryLink, deployLink, dataAosDelay }) => {
     return (
-        <div className="bg-neutral-800 rounded-lg pb-3 md:w-[430px] lg:w-[365px]" data-aos={dataAos} data-aos-duration={"1000"} data-aos-delay={dataAosDelay}>
+        <div className="bg-neutral-800 rounded-lg pb-3 md:w-[430px] lg:w-[365px] xl:w-[395px]" data-aos={dataAos} data-aos-duration={"1000"} data-aos-delay={dataAosDelay}>
             <div>
-                <Image src={image} width={2000} height={2000} alt="Ecommerce Project" className='w-full image-bg' />
+                <Image src={image} width={1280} height={768} alt="Ecommerce Project" className='w-full' />
             </div>
-            <div className="flex flex-col text-gray-100 items-center">
-                <h3 className="text-2xl text-white font-semibold my-2">{title}</h3>
-                <p className="text-gray-200 text-sm px-4 max-w-sm lg:max-w-xs text-center">{description}</p>
+            <div className="flex flex-col xl:gap-1 text-gray-100 items-center">
+                <h3 className="text-2xl xl:text-3xl text-white font-semibold my-2">{title}</h3>
+                <p className="text-gray-200 text-sm xl:text-md px-4 xl:px-5 max-w-sm lg:max-w-xs xl:max-w-md text-center">{description}</p>
                 <div className='py-4'>
                     {map}
                 </div>

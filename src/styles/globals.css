@@ -6,10 +6,6 @@
     animation: slide-in 0.3s ease-in-out;
   }
 
-.image-bg{
-    height: 220px;
-  }
-
 .logo{
     background-size: cover;
     width: 60px;
