@@ -6,13 +6,13 @@
     animation: slide-in 0.3s ease-in-out;
   }
 
-.logo{
+.logo {
     background-size: cover;
     width: 60px;
     height: 40px;
 }
 
-.icons-img{
+.icons-img {
     width: 55px;
     height: 55px;
 }

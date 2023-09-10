@@ -31,21 +31,31 @@ const Projects = () => {
                     map={
                         iconsProject.map((icon, index) => (
                             <div key={index} className='flex gap-4 justify-center lg:justify-start'>
-                                <span className='rounded-full p-2 bg-gray-200'>
-                                    <img src={icon.next} width={20} height={20} alt='Next'></img>
-                                </span>
-                                <span className='rounded-full p-2 bg-gray-200'>
-                                    <img src={icon.tailwind} width={20} height={20} alt='Tailwind'></img>
-                                </span>
-                                <span className='rounded-full p-2 bg-gray-200'>
-                                    <img src={icon.node} width={20} height={20} alt='Node.js'></img>
-                                </span>
-                                <span className='rounded-full p-2 bg-gray-200'>
-                                    <img src={icon.express} width={20} height={20} alt='Express'></img>
-                                </span>
-                                <span className='rounded-full p-2 bg-gray-200'>
-                                    <img src={icon.mysql} width={20} height={20} alt='MySQL'></img>
-                                </span>
+                                <abbr title='Next.js' className='flex'>
+                                    <span className='rounded-full p-2 bg-gray-200'>
+                                        <img src={icon.next} width={20} height={20} alt='Next'></img>
+                                    </span>
+                                </abbr>
+                                <abbr title='Tailwind CSS' className='flex'>
+                                    <span className='rounded-full p-2 bg-gray-200'>
+                                        <img src={icon.tailwind} width={20} height={20} alt='Tailwind'></img>
+                                    </span>
+                                </abbr>
+                                <abbr title='Node.js' className='flex'>
+                                    <span className='rounded-full p-2 bg-gray-200'>
+                                        <img src={icon.node} width={20} height={20} alt='Node.js'></img>
+                                    </span>
+                                </abbr>
+                                <abbr title='Express' className='flex'>
+                                    <span className='rounded-full p-2 bg-gray-200'>
+                                        <img src={icon.express} width={20} height={20} alt='Express'></img>
+                                    </span>
+                                </abbr>
+                                <abbr title='MySQL' className='flex'>
+                                    <span className='rounded-full p-2 bg-gray-200'>
+                                        <img src={icon.mysql} width={20} height={20} alt='MySQL'></img>
+                                    </span>
+                                </abbr>
                             </div>
                         ))}
                 />
@@ -61,21 +71,31 @@ const Projects = () => {
                     map={
                         iconsProject.map((icon, index) => (
                             <div key={index} className='flex gap-4 justify-center lg:justify-start'>
-                                <span className='rounded-full p-2 bg-gray-200'>
-                                    <img src={icon.next} width={20} height={20} alt='Next'></img>
-                                </span>
-                                <span className='rounded-full p-2 bg-gray-200'>
-                                    <img src={icon.tailwind} width={20} height={20} alt='Tailwind'></img>
-                                </span>
-                                <span className='rounded-full p-2 bg-gray-200'>
-                                    <img src={icon.node} width={20} height={20} alt='Node.js'></img>
-                                </span>
-                                <span className='rounded-full p-2 bg-gray-200'>
-                                    <img src={icon.express} width={20} height={20} alt='Express'></img>
-                                </span>
-                                <span className='rounded-full p-2 bg-gray-200'>
-                                    <img src={icon.mongo} width={20} height={20} alt='MongoDB'></img>
-                                </span>
+                                <abbr title='Next.js' className='flex'>
+                                    <span className='rounded-full p-2 bg-gray-200'>
+                                        <img src={icon.next} width={20} height={20} alt='Next'></img>
+                                    </span>
+                                </abbr>
+                                <abbr title='Tailwind CSS' className='flex'>
+                                    <span className='rounded-full p-2 bg-gray-200'>
+                                        <img src={icon.tailwind} width={20} height={20} alt='Tailwind'></img>
+                                    </span>
+                                </abbr>
+                                <abbr title='Node.js' className='flex'>
+                                    <span className='rounded-full p-2 bg-gray-200'>
+                                        <img src={icon.node} width={20} height={20} alt='Node.js'></img>
+                                    </span>
+                                </abbr>
+                                <abbr title='Express' className='flex'>
+                                    <span className='rounded-full p-2 bg-gray-200'>
+                                        <img src={icon.express} width={20} height={20} alt='Express'></img>
+                                    </span>
+                                </abbr>
+                                <abbr title='Mongo DB' className='flex'>
+                                    <span className='rounded-full p-2 bg-gray-200'>
+                                        <img src={icon.mongo} width={20} height={20} alt='Mongo DB'></img>
+                                    </span>
+                                </abbr>
                             </div>
                         ))}
                 />
@@ -91,12 +111,16 @@ const Projects = () => {
                     map={
                         iconsProject.map((icon, index) => (
                             <div key={index} className='flex gap-4 justify-center lg:justify-start'>
-                                <span className='rounded-full p-2 bg-gray-200'>
-                                    <img src={icon.next} width={20} height={20} alt='Next'></img>
-                                </span>
-                                <span className='rounded-full p-2 bg-gray-200'>
-                                    <img src={icon.tailwind} width={20} height={20} alt='Tailwind'></img>
-                                </span>
+                                <abbr title='Next.js' className='flex'>
+                                    <span className='rounded-full p-2 bg-gray-200'>
+                                        <img src={icon.next} width={20} height={20} alt='Next'></img>
+                                    </span>
+                                </abbr>
+                                <abbr title='Tailwind CSS' className='flex'>
+                                    <span className='rounded-full p-2 bg-gray-200'>
+                                        <img src={icon.tailwind} width={20} height={20} alt='Tailwind'></img>
+                                    </span>
+                                </abbr>
                             </div>
                         ))}
                 />
