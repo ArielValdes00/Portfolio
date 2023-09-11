@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 const DownloadCV = ({ className }) => {
     return (
-        <Link href={"/pdf/cv.pdf"} download={"cv.pdf"} className="lg:flex justify-end">
-            <button className={`${className} text-white bg-red-700 rounded-full font-semibold hover:bg-red-800`}>Download CV</button>
+        <Link href={"/pdf/cv.pdf"} target='_blank' download={"cv.pdf"} className={`${className} text-white bg-red-700 rounded-full font-semibold hover:bg-red-800`}>
+            <p>Download CV</p>
         </Link>
     )
 }
