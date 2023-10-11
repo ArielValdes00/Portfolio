@@ -7,8 +7,10 @@ import Location from '../../public/Icons/location.png';
 import DownloadCV from './DownloadCV';
 import Link from 'next/link';
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { useTranslation } from '@/utils/useTranslation.js';
 
 const GetInTouch = ({ toast }) => {
+    const t = useTranslation();
 
     const handleCopy = () => {
         toast.success("Email copied to clipboard");
@@ -17,7 +19,7 @@ const GetInTouch = ({ toast }) => {
     return (
         <main className='bg-black flex flex-col items-center lg:items-start gap-4 text-white mb-6'>
             <div>
-                <h4 className='text-5xl lg:text-4xl font-semibold'>Get In Touch</h4>
+                <h4 className='text-[40px] lg:text-4xl font-semibold'>{t.getInTouch}</h4>
             </div>
             <div>
                 <CopyToClipboard text="ariel.jvaldes20@gmail.com" onCopy={handleCopy}>
@@ -31,7 +33,7 @@ const GetInTouch = ({ toast }) => {
                     <p>Buenos Aires, Argentina</p>
                 </div>
             </div>
-            <DownloadCV className={"px-4 py-2 text-sm rounded-md"} />
+            <DownloadCV className={"px-4 py-2 text-sm rounded-md font-normal"} />
             <div className='flex justify-center gap-3'>
                 <Link href={'#'} className='transform hover:scale-105'>
                     <Image src={Linkedin} width={35} height={35} alt='Linkedin' />

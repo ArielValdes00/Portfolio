@@ -2,8 +2,11 @@ import DownloadCV from './DownloadCV';
 import Logo from '../../public/logo.png';
 import Image from "next/image";
 import { useEffect } from "react";
+import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslation } from '@/utils/useTranslation';
 
 const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatures, handleScrollProjects, handleScrollContacts }) => {
+    const t = useTranslation();
 
     const handleShowMenu = () => {
         setShowMenu(!showMenu);
@@ -33,8 +36,9 @@ const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatur
 
     return (
         <header className="grid grid-cols-4 fixed w-full items-center lg:px-5 p-3 z-40 bg-black">
-            <div>
+            <div className='flex items-center gap-4 text-white'>
                 <Image src={Logo} height={400} width={400} alt='Ariel Valdés' className='logo' loading='eager' />
+                <LanguageSwitcher/>
             </div>
             <div className="text-white font-semibold justify-self-end col-span-3">
                 <div
@@ -69,7 +73,7 @@ const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatur
                         className="lg:hover:text-red-700 cursor-pointer transition duration-200"
                         tabIndex="0"
                     >
-                        About Me
+                        {t.about}
                     </li>
                     <li
                         onClick={handleScrollFeatures}
@@ -81,7 +85,7 @@ const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatur
                         className="lg:hover:text-red-700 cursor-pointer transition duration-200"
                         tabIndex="0"
                     >
-                        Features
+                        {t.features}
                     </li>
                     <li
                         onClick={handleScrollProjects}
@@ -93,7 +97,7 @@ const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatur
                         className="lg:hover:text-red-700 cursor-pointer transition duration-200"
                         tabIndex="0"
                     >
-                        Projects
+                        {t.projects}
                     </li>
                     <li
                         onClick={handleScrollContacts}
@@ -105,7 +109,7 @@ const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatur
                         className="lg:hover:text-red-700 cursor-pointer transition duration-200"
                         tabIndex="0"
                     >
-                        Contact
+                        {t.contact}
                     </li>
                     <DownloadCV
                         className={"px-5 py-3 lg:px-4 lg:py-2"}

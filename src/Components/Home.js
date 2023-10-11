@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
-import Linkedin from '../../public/Icons/linkedin.png'
-import GitHub from '../../public/Icons/github.png'
-import Stain from '../../public/stain.png'
+import Linkedin from '../../public/Icons/linkedin.png';
+import GitHub from '../../public/Icons/github.png';
+import Stain from '../../public/stain.png';
 import Link from 'next/link';
+import { useTranslation } from '@/utils/useTranslation';
 
 const Home = () => {
+    const t = useTranslation();
     const controls = useAnimation();
 
     useEffect(() => {
@@ -21,8 +23,8 @@ const Home = () => {
                 animate={controls}
                 transition={{ duration: 1.0 }}
             >
-                <h1 className="text-6xl font-bold mb-5 text-center px-5 z-30">Welcome to My Portfolio!</h1>
-                <p className="text-xl mb-5 text-center z-30">I am a full-stack web developer.</p>
+                <h1 className="text-5xl lg:text-6xl font-bold mb-5 text-center px-5 z-30">{t.title}</h1>
+                <p className="text-xl mb-5 text-center z-30">{t.description}</p>
                 <Image src={Stain}
                     height={600}
                     width={600}

@@ -6,8 +6,10 @@ import ProjectCards from './ProjectCards';
 import { iconsProject } from '@/icons-data';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from '@/utils/useTranslation';
 
 const Projects = () => {
+    const t = useTranslation();
 
     useEffect(() => {
         AOS.init();
@@ -16,18 +18,17 @@ const Projects = () => {
     return (
         <div>
             <div className='text-white text-center'>
-                <h2 className='text-5xl mb-10 font-semibold'>Projects</h2>
+                <h2 className='text-5xl mb-10 font-semibold'>{t.projects}</h2>
             </div>
             <div className='flex flex-col lg:flex-row justify-center items-center gap-4 xl:gap-7 xl:px-5'>
                 <ProjectCards
                     dataAosDelay={"100"}
                     dataAos={'fade-right'}
                     title={'E-commerce'}
-                    description={`Created e-commerce platform with cart, PayPal, and role-based dashboard. 
-                    Demonstrates seamless product management, user authentication, and tracking.`}
+                    description={t.ecommerceDescription}
                     image={Ecommerce}
                     repositoryLink={'https://github.com/ArielValdes00/ecommerce-funkos'}
-                    deployLink={'#'}
+                    deployLink={'https://ecommerce-funkos-client.vercel.app/'}
                     map={
                         iconsProject.map((icon, index) => (
                             <div key={index} className='flex gap-4 justify-center lg:justify-start'>
@@ -63,8 +64,7 @@ const Projects = () => {
                     dataAosDelay={"200"}
                     dataAos={'fade-right'}
                     title={'Chat App'}
-                    description={`My chat app provides a secure platform for real-time communication. It offers seamless,
-                     dynamic conversations using Socket.io for an engaging user experience.`}
+                    description={t.chatDescription}
                     image={ChatApp}
                     repositoryLink={'https://github.com/ArielValdes00/Chat-App'}
                     deployLink={'https://chat-app-ten-topaz.vercel.app'}
@@ -103,8 +103,7 @@ const Projects = () => {
                     dataAosDelay={"300"}
                     dataAos={'fade-right'}
                     title={'Flag Quiz App'}
-                    description={`Discover the World Flags Quiz: Test your knowledge, guess flags, earn points! 10-second timer,
-                     explore flags from all continents in this engaging and educational quiz.`}
+                    description={t.flagQuizDescription}
                     image={QuizApp}
                     repositoryLink={'https://github.com/ArielValdes00/FlagQuizApp'}
                     deployLink={'https://flag-quiz-app-pi.vercel.app'}

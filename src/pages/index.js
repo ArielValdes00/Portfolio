@@ -5,13 +5,14 @@ import Projects from '@/Components/Projects';
 import Contact from '@/Components/Contact';
 import Home from '@/Components/Home';
 import Image from 'next/image';
-import AboutMe from '../../public/aboutme-section.svg'
+import AboutMe from '../../public/aboutme-section.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Features from '@/Components/Features';
 import GetInTouch from '@/Components/GetInTouch';
-import { toast, ToastContainer } from 'react-toastify'
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from '@/utils/useTranslation';
 
 export default function Index() {
     const sectionAboutMe = useRef(null);
@@ -20,6 +21,7 @@ export default function Index() {
     const sectionContact = useRef(null);
     const [showMenu, setShowMenu] = useState(false);
     const [showNavbar, setShowNavbar] = useState(true);
+    const t = useTranslation();
 
     useEffect(() => {
         AOS.init();
@@ -80,19 +82,19 @@ export default function Index() {
                     <Home />
                 </div>
             </main>
-            <section className="h-screen grid place-items-center z-50 overflow-hidden" data-aos="fade-right" data-aos-duration="1000" ref={sectionAboutMe}>
+            <section
+                className="h-screen grid place-items-center z-50 overflow-hidden"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                ref={sectionAboutMe}>
                 <div className="grid lg:grid-cols-2 items-center text-white mx-5 p-5" >
                     <div className="mx-auto w-2/3 lg:w-full" >
                         <Image src={AboutMe} height={430} width={430} alt="Profile" />
                     </div>
                     <div className="text-center lg:w-[500px] h-full pt-8">
-                        <h2 className="text-5xl font-semibold mb-5">About Me</h2>
+                        <h2 className="text-5xl font-semibold mb-5">{t.about}</h2>
                         <p className="leading-loose max-w-md  text-gray-200">
-                            I'm a self-taught full-stack web developer passionate about creating user-friendly and innovative
-                            web applications. With a focus on continuous learning, I stay updated with the latest technologies
-                            to deliver tailored solutions that drive results. By combining my front-end and back-end skills,
-                            I transform ideas into visually appealing web experiences. Let's collaborate and bring your vision
-                            to life with impactful digital solutions.
+                            {t.textAboutMe}
                         </p>
                     </div>
                 </div>
@@ -100,7 +102,7 @@ export default function Index() {
             <section className='h-screen grid place-items-center mx-auto' ref={sectionFeatures}>
                 <div className='text-neutral-100 text-center px-5'>
                     <div className='mb-10 text-white' data-aos="fade-up" data-aos-delay="50">
-                        <h2 className='text-5xl font-semibold'>Features</h2>
+                        <h2 className='text-5xl font-semibold'>{t.features}</h2>
                     </div>
                     <Features />
                 </div>

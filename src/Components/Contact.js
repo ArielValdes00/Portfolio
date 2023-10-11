@@ -2,9 +2,11 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Loader from '../../public/Icons/loader.gif';
 import Image from 'next/image';
+import { useTranslation } from '@/utils/useTranslation';
 
 const Contact = ({ toast }) => {
-    const [loading, setLoading] = useState(false)
+    const t = useTranslation();
+    const [loading, setLoading] = useState(false);
     const [form, setForm] = useState({
         user_email: "",
         user_name: "",
@@ -42,7 +44,7 @@ const Contact = ({ toast }) => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="user_name" className="text-white block mb-2">Subject</label>
+                    <label htmlFor="user_name" className="text-white block mb-2">{t.subject}</label>
                     <input
                         type="text"
                         onChange={handleChange}
@@ -52,7 +54,7 @@ const Contact = ({ toast }) => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="message" className="text-white block mb-2">Message</label>
+                    <label htmlFor="message" className="text-white block mb-2">{t.message}</label>
                     <textarea onChange={handleChange}
                         className="w-full bg-neutral-700 rounded ps-2 py-1 text-white focus:border-black border-2 border-transparent outline-none"
                         rows={4}
@@ -65,10 +67,10 @@ const Contact = ({ toast }) => {
                     {loading ? (
                         <>
                             <Image src={Loader} height={20} width={20} alt='Loading' loading="eager" />
-                            <span>Loading...</span>
+                            <span>{t.loading}</span>
                         </>
                     ) : (
-                        <span>Submit</span>
+                        <span>{t.submit}</span>
                     )}
                 </button>
             </form>
