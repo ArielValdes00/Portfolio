@@ -13,6 +13,7 @@ import GetInTouch from '@/Components/GetInTouch';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useTranslation } from '@/utils/useTranslation';
+import ScrollToTopButton from '@/Components/ScrollToTopButton';
 
 export default function Index() {
     const sectionAboutMe = useRef(null);
@@ -114,6 +115,9 @@ export default function Index() {
                 <GetInTouch toast={toast} />
                 <Contact toast={toast} />
             </section>
+            <div className='flex justify-center'>
+                <ScrollToTopButton />
+            </div>
             <ToastContainer
                 position="bottom-right"
                 autoClose={3000}

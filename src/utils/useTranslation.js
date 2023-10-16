@@ -5,7 +5,7 @@ import en from '../../public/locales/en';
 export const useTranslation = () => {
     const router = useRouter();
     const { locale } = router;
-    const t = locale === 'es' ? en : es;
+    const t = locale === 'es' ? es : en;
 
     return t;
 };

@@ -1,21 +1,24 @@
 import '@/styles/globals.css';
 import Head from 'next/head';
+import { useTranslation } from '@/utils/useTranslation';
 
 export default function App({ Component, pageProps }) {
+    const t = useTranslation();
+
     return (
         <>
             <Head>
-                <title>Funko</title>
+                <title>{t.portfolio}</title>
                 <link rel="icon" href="/logo-title.png" />
-                <meta name="description" content="Welcome to Funko Pop Store! Explore our wide selection of Funko Pop figures. From your favorite characters to limited editions, we have it all. Enjoy hassle-free shopping with our cart, secure payment methods including PayPal, and a user-friendly dashboard for easy order tracking." />
-                <meta property="og:title" content="Funko Pop Store - Online Funko Pop Figure Shop" />
-                <meta property="og:description" content="Welcome to Funko Pop Store! Explore our wide selection of Funko Pop figures. From your favorite characters to limited editions, we have it all. Enjoy hassle-free shopping with our cart, secure payment methods including PayPal, and a user-friendly dashboard for easy order tracking." />
+                <meta name="description" content="Welcome to my online portfolio. Explore my web development projects and skills, including JavaScript, React, Next.js, HTML, CSS, Node.js, Express, MySQL, and MongoDB." />
+                <meta property="og:title" content="Ariel Valdés' Portfolio - Web Development" />
+                <meta property="og:description" content="Welcome to my online portfolio. Explore my web development projects and skills, including JavaScript, React, Next.js, HTML, CSS, Node.js, Express, MySQL, and MongoDB." />
                 <meta property="og:image" content="https://res.cloudinary.com/dnczjmsbt/image/upload/v1691437299/bg-portfolio_f0unhu.png" />
-                <meta property="og:url" content="https://my-funko-pop-store.com/" />
+                <meta property="og:url" content="https://portfolio-ochre-six-55.vercel.app/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:locale" content="en_US" />
-                <meta property="og:site_name" content="Funko Pop Store - Online Funko Pop Figure Shop" />
-                <meta name="keywords" content="Funko Pop, online store, Funko Pop figures, shopping cart, limited editions, collectibles, authentication, PayPal payment, user-friendly dashboard" />
+                <meta property="og:site_name" content="Ariel Valdés' Portfolio - Web Development" />
+                <meta name="keywords" content="Web development, JavaScript, React, Next.js, HTML, CSS, Node.js, Express, MySQL, MongoDB, projects, skills" />
                 <meta name="author" content="Ariel Valdés" />
             </Head>
             <Component {...pageProps} />

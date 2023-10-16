@@ -1,4 +1,5 @@
 export default {
+    portfolio: "portfolio",
     about: "About Me",
     features: "Technologies",
     projects: "Projects",

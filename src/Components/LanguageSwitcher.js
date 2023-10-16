@@ -11,7 +11,7 @@ export default function LanguageSwitcher() {
 
     return (
         <button onClick={switchLanguage} className='text-xl font-normal mb-1'>
-            {locale === 'en' ? '🇪🇸' : '🇬🇧'}
+            {locale === 'es' ? '🇪🇸' : '🇬🇧'}
         </button>
     );
 }
