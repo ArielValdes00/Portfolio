@@ -1,6 +1,5 @@
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import ArrowUp from '/public/Icons/arrow-up.png';
+import { FaArrowUp } from 'react-icons/fa';
 
 export default function ScrollToTopButton() {
     const [isTop, setIsTop] = useState(true);
@@ -30,6 +29,6 @@ export default function ScrollToTopButton() {
             className="fixed bottom-2 lg:bottom-5 lg:right-10 p-2 z-10 animate-bounce rounded-full bg-neutral-300 justify-center items-center"
             onClick={scrollToTop}
         >
-            <Image src={ArrowUp} height={30} width={30} />
+            <FaArrowUp size={20} />
         </button>;
 }

@@ -1,5 +1,5 @@
 export default {
-    portfolio: "portfolio",
+    portfolio: "Portfolio",
     about: "About Me",
     features: "Technologies",
     projects: "Projects",

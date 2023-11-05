@@ -69,7 +69,7 @@ export default function Index() {
 
     return (
         <>
-            <main className="flex flex-col h-screen ">
+            <main className="flex flex-col h-screen">
                 {showNavbar && (
                     <NavBar showMenu={showMenu}
                         setShowMenu={setShowMenu}
@@ -93,7 +93,7 @@ export default function Index() {
                         <Image src={AboutMe} height={430} width={430} alt="Profile" />
                     </div>
                     <div className="text-center lg:w-[500px] h-full pt-8">
-                        <h2 className="text-5xl font-semibold mb-5">{t.about}</h2>
+                        <h2 className="text-4xl md:text-5xl font-semibold mb-5">{t.about}</h2>
                         <p className="leading-loose max-w-md  text-gray-200">
                             {t.textAboutMe}
                         </p>
@@ -103,7 +103,7 @@ export default function Index() {
             <section className='h-screen grid place-items-center mx-auto' ref={sectionFeatures}>
                 <div className='text-neutral-100 text-center px-5'>
                     <div className='mb-10 text-white' data-aos="fade-up" data-aos-delay="50">
-                        <h2 className='text-5xl font-semibold'>{t.features}</h2>
+                        <h2 className='text-4xl md:text-5xl font-semibold'>{t.features}</h2>
                     </div>
                     <Features />
                 </div>

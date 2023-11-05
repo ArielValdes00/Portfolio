@@ -10,6 +10,13 @@ module.exports = {
             },
             colors: {
                 black: '#111111',
+                laravel: '#F05340',
+                react: '#61DBFB',
+                git: '#F34F29',
+                node: '#68a063',
+                typescript: '#007acc',
+                mysql: '#00758F',
+                mongo: '#3FA037'
             },
         },
     },

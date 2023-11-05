@@ -57,11 +57,11 @@ const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatur
                 </div>
                 <ul
                     role="navigation"
-                    aria-label="Menú de navegación"
+                    aria-label="navigation menu"
                     className={`${showMenu
                         ? "block absolute bg-neutral-800 left-0 top-[63px] h-screen w-full pb-20 menu-open"
                         : "hidden"
-                        } flex flex-col justify-center items-center text-white gap-16 text-4xl lg:text-lg lg:flex lg:flex-row`}
+                        } flex flex-col justify-center items-center text-white gap-16 text-3xl lg:text-lg lg:flex lg:flex-row`}
                 >
                     <li
                         onClick={handleScrollAboutMe}
@@ -112,7 +112,7 @@ const NavBar = ({ showMenu, setShowMenu, handleScrollAboutMe, handleScrollFeatur
                         {t.contact}
                     </li>
                     <DownloadCV
-                        className={"px-5 py-3 lg:px-4 lg:py-2"}
+                        className={"px-6 py-3 text-2xl lg:text-lg lg:px-4 lg:py-2"}
                         tabIndex="0"
                     />
                 </ul>

@@ -3,10 +3,13 @@ import ChatApp from '../../public/bg-chat-app.png';
 import Ecommerce from '../../public/bg-ecommerce.png';
 import QuizApp from '../../public/quiz-app-bg.png';
 import ProjectCards from './ProjectCards';
-import { iconsProject } from '@/icons-data';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useTranslation } from '@/utils/useTranslation';
+import { TbBrandNextjs } from 'react-icons/tb';
+import { SiExpress, SiMongodb, SiTailwindcss } from 'react-icons/si';
+import { FaNodeJs } from 'react-icons/fa';
+import { DiMysql } from 'react-icons/di';
 
 const Projects = () => {
     const t = useTranslation();
@@ -18,7 +21,7 @@ const Projects = () => {
     return (
         <div>
             <div className='text-white text-center'>
-                <h2 className='text-5xl mb-10 font-semibold'>{t.projects}</h2>
+                <h2 className='text-4xl md:text-5xl mb-10 font-semibold'>{t.projects}</h2>
             </div>
             <div className='flex flex-col lg:flex-row justify-center items-center gap-4 xl:gap-7 xl:px-5'>
                 <ProjectCards
@@ -29,36 +32,15 @@ const Projects = () => {
                     image={Ecommerce}
                     repositoryLink={'https://github.com/ArielValdes00/ecommerce-funkos'}
                     deployLink={'https://ecommerce-funkos-client.vercel.app/'}
-                    map={
-                        iconsProject.map((icon, index) => (
-                            <div key={index} className='flex gap-4 justify-center lg:justify-start'>
-                                <abbr title='Next.js' className='flex'>
-                                    <span className='rounded-full p-2 bg-gray-200'>
-                                        <img src={icon.next} width={20} height={20} alt='Next'></img>
-                                    </span>
-                                </abbr>
-                                <abbr title='Tailwind CSS' className='flex'>
-                                    <span className='rounded-full p-2 bg-gray-200'>
-                                        <img src={icon.tailwind} width={20} height={20} alt='Tailwind'></img>
-                                    </span>
-                                </abbr>
-                                <abbr title='Node.js' className='flex'>
-                                    <span className='rounded-full p-2 bg-gray-200'>
-                                        <img src={icon.node} width={20} height={20} alt='Node.js'></img>
-                                    </span>
-                                </abbr>
-                                <abbr title='Express' className='flex'>
-                                    <span className='rounded-full p-2 bg-gray-200'>
-                                        <img src={icon.express} width={20} height={20} alt='Express'></img>
-                                    </span>
-                                </abbr>
-                                <abbr title='MySQL' className='flex'>
-                                    <span className='rounded-full p-2 bg-gray-200'>
-                                        <img src={icon.mysql} width={20} height={20} alt='MySQL'></img>
-                                    </span>
-                                </abbr>
-                            </div>
-                        ))}
+                    icons={
+                        <div className='flex justify-center items-center gap-2 sm:gap-3'>
+                            <TbBrandNextjs size={30} className='text-neutral-500' title='Next.js' />
+                            <SiTailwindcss size={30} className='text-sky-500' title='Tailwind CSS' />
+                            <FaNodeJs size={30} className='text-node' title='Node.js' />
+                            <SiExpress size={30} className='text-neutral-500' title='Express.js' />
+                            <DiMysql size={30} className='text-mysql' title='MySQL' />
+                        </div>
+                    }
                 />
                 <ProjectCards
                     dataAosDelay={"200"}
@@ -68,36 +50,15 @@ const Projects = () => {
                     image={ChatApp}
                     repositoryLink={'https://github.com/ArielValdes00/Chat-App'}
                     deployLink={'https://chat-app-ten-topaz.vercel.app'}
-                    map={
-                        iconsProject.map((icon, index) => (
-                            <div key={index} className='flex gap-4 justify-center lg:justify-start'>
-                                <abbr title='Next.js' className='flex'>
-                                    <span className='rounded-full p-2 bg-gray-200'>
-                                        <img src={icon.next} width={20} height={20} alt='Next'></img>
-                                    </span>
-                                </abbr>
-                                <abbr title='Tailwind CSS' className='flex'>
-                                    <span className='rounded-full p-2 bg-gray-200'>
-                                        <img src={icon.tailwind} width={20} height={20} alt='Tailwind'></img>
-                                    </span>
-                                </abbr>
-                                <abbr title='Node.js' className='flex'>
-                                    <span className='rounded-full p-2 bg-gray-200'>
-                                        <img src={icon.node} width={20} height={20} alt='Node.js'></img>
-                                    </span>
-                                </abbr>
-                                <abbr title='Express' className='flex'>
-                                    <span className='rounded-full p-2 bg-gray-200'>
-                                        <img src={icon.express} width={20} height={20} alt='Express'></img>
-                                    </span>
-                                </abbr>
-                                <abbr title='Mongo DB' className='flex'>
-                                    <span className='rounded-full p-2 bg-gray-200'>
-                                        <img src={icon.mongo} width={20} height={20} alt='Mongo DB'></img>
-                                    </span>
-                                </abbr>
-                            </div>
-                        ))}
+                    icons={
+                        <div className='flex justify-center items-center gap-2 sm:gap-3'>
+                            <TbBrandNextjs size={30} className='text-neutral-500' title='Next.js' />
+                            <SiTailwindcss size={30} className='text-sky-500' title='Tailwind' />
+                            <FaNodeJs size={30} className='text-node' title='Node.js' />
+                            <SiExpress size={30} className='text-neutral-500' title='Express' />
+                            <SiMongodb size={30} className='text-mongo' title='MongoDB' />
+                        </div>
+                    }
                 />
                 <ProjectCards
                     dataAosDelay={"300"}
@@ -107,21 +68,12 @@ const Projects = () => {
                     image={QuizApp}
                     repositoryLink={'https://github.com/ArielValdes00/FlagQuizApp'}
                     deployLink={'https://flag-quiz-app-pi.vercel.app'}
-                    map={
-                        iconsProject.map((icon, index) => (
-                            <div key={index} className='flex gap-4 justify-center lg:justify-start'>
-                                <abbr title='Next.js' className='flex'>
-                                    <span className='rounded-full p-2 bg-gray-200'>
-                                        <img src={icon.next} width={20} height={20} alt='Next'></img>
-                                    </span>
-                                </abbr>
-                                <abbr title='Tailwind CSS' className='flex'>
-                                    <span className='rounded-full p-2 bg-gray-200'>
-                                        <img src={icon.tailwind} width={20} height={20} alt='Tailwind'></img>
-                                    </span>
-                                </abbr>
-                            </div>
-                        ))}
+                    icons={
+                        <div className='flex justify-center items-center gap-2 sm:gap-3'>
+                            <TbBrandNextjs size={30} className='text-neutral-500' title='Next.js'/>
+                            <SiTailwindcss size={30} className='text-sky-500' title='Tailwind'/>
+                        </div>
+                    }
                 />
             </div>
         </div>

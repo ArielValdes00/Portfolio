@@ -1,20 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import GitHub from '../../public/Icons/github.png';
-import Demo from '../../public/Icons/demo.png';
-
-const ProjectCards = ({ image, title, description, map, dataAos, repositoryLink, deployLink, dataAosDelay }) => {
+import { FaPlay } from 'react-icons/fa';
+import { SiGithub } from 'react-icons/si';
+const ProjectCards = ({ image, title, description, icons, dataAos, repositoryLink, deployLink, dataAosDelay }) => {
     return (
-        <div className="bg-neutral-800 rounded-lg w-[80%] sm:w-[60%] md:w-[45%] pb-3" data-aos={dataAos} data-aos-duration={"1000"} data-aos-delay={dataAosDelay}>
+        <div className="bg-neutral-800 rounded-lg w-[80%] sm:w-[60%] md:w-[40%] lg:w-[30%] pb-3" data-aos={dataAos} data-aos-duration={"1000"} data-aos-delay={dataAosDelay}>
             <div>
                 <Image src={image} width={1280} height={768} alt="Ecommerce Project" className='rounded-t-lg' />
             </div>
             <div className="flex flex-col xl:gap-1 text-gray-100 items-center">
                 <h3 className="text-2xl xl:text-3xl text-white font-semibold my-2">{title}</h3>
-                <p className="text-gray-200 text-sm xl:text-md px-4 xl:px-5 max-w-sm lg:max-w-xs xl:max-w-md text-center">{description}</p>
-                <div className='py-4'>
-                    {map}
+                <p className="text-gray-200 text-sm xl:text-md px-2 xl:px-5 max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-md text-center">{description}</p>
+                <div className='p-4'>
+                    {icons}
                 </div>
                 <div className='flex items-center justify-center gap-3'>
                     <Link href={deployLink}
@@ -22,7 +21,7 @@ const ProjectCards = ({ image, title, description, map, dataAos, repositoryLink,
                         target="_blank"
                         rel="noopener noreferrer">
                         <p>Demo</p>
-                        <Image src={Demo} width={19} height={19} alt='Demo' />
+                        <FaPlay size={15} className='text-gray-100'/>
                     </Link>
                     <Link
                         href={repositoryLink}
@@ -30,7 +29,7 @@ const ProjectCards = ({ image, title, description, map, dataAos, repositoryLink,
                         target="_blank"
                         rel="noopener noreferrer">
                         <p>GitHub</p>
-                        <Image src={GitHub} width={19} height={19} alt='GitHub' />
+                        <SiGithub size={15} className='text-gray-100' />
                     </Link>
                 </div>
             </div>

@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Linkedin from '../../public/Icons/linkedin.png';
-import GitHub from '../../public/Icons/github.png';
-import Email from '../../public/Icons/email.png';
-import Location from '../../public/Icons/location.png';
 import DownloadCV from './DownloadCV';
 import Link from 'next/link';
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useTranslation } from '@/utils/useTranslation.js';
+import { SiGithub } from 'react-icons/si';
+import { TfiLocationPin } from 'react-icons/tfi';
+import { AiOutlineMail } from 'react-icons/ai';
 
 const GetInTouch = ({ toast }) => {
     const t = useTranslation();
@@ -24,22 +24,22 @@ const GetInTouch = ({ toast }) => {
             <div>
                 <CopyToClipboard text="ariel.jvaldes20@gmail.com" onCopy={handleCopy}>
                     <div className="flex items-center text-sm gap-3 mb-2 cursor-pointer">
-                        <Image src={Email} height={24} width={24} alt="Email" loading='eager' />
-                        <p>ariel.jvaldes20@gmail.com</p>
+                        <AiOutlineMail size={20} />
+                        <p className='hover:underline'>ariel.jvaldes20@gmail.com</p>
                     </div>
                 </CopyToClipboard>
                 <div className='flex items-center text-sm gap-3'>
-                    <Image src={Location} height={24} width={24} alt='Location' loading='eager' />
+                    <TfiLocationPin size={20} />
                     <p>Buenos Aires, Argentina</p>
                 </div>
             </div>
             <DownloadCV className={"px-4 py-2 text-sm rounded-md font-normal"} />
             <div className='flex justify-center gap-3'>
-                <Link href={'#'} className='transform hover:scale-105'>
+                <Link href={'https://www.linkedin.com/in/arielvaldes/'} target="_blank" className='transform hover:scale-105'>
                     <Image src={Linkedin} width={35} height={35} alt='Linkedin' />
                 </Link>
                 <Link href={'https://github.com/ArielValdes00'} target="_blank" className='transform hover:scale-105'>
-                    <Image src={GitHub} width={35} height={35} alt='GitHub' />
+                    <SiGithub size={35} className='text-gray-100' />
                 </Link>
             </div>
         </main>
