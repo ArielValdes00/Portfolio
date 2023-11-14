@@ -19,16 +19,16 @@ const GetInTouch = ({ toast }) => {
     return (
         <main className='bg-black flex flex-col items-center lg:items-start gap-4 text-white mb-6'>
             <div>
-                <h4 className='text-[40px] lg:text-4xl font-semibold'>{t.getInTouch}</h4>
+                <h4 className='text-[40px] lg:text-4xl xl:text-5xl font-semibold'>{t.getInTouch}</h4>
             </div>
             <div>
                 <CopyToClipboard text="ariel.jvaldes20@gmail.com" onCopy={handleCopy}>
-                    <div className="flex items-center text-sm gap-3 mb-2 cursor-pointer">
+                    <div className="flex items-center text-sm xl:text-[16px] gap-3 mb-2 cursor-pointer">
                         <AiOutlineMail size={20} />
                         <p className='hover:underline'>ariel.jvaldes20@gmail.com</p>
                     </div>
                 </CopyToClipboard>
-                <div className='flex items-center text-sm gap-3'>
+                <div className='flex items-center text-sm gap-3 xl:text-[16px]'>
                     <TfiLocationPin size={20} />
                     <p>Buenos Aires, Argentina</p>
                 </div>

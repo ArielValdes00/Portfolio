@@ -15,5 +15,6 @@ export default {
     ecommerceDescription: "Plataforma de comercio electrónico integral con carrito, PayPal y panel de control basado en roles para una experiencia de compra sin interrupciones.",
     chatDescription: "Aplicación de chat que ofrece comunicación segura en tiempo real, con conversaciones dinámicas e ininterrumpidas para la interacción del usuario.",
     flagQuizDescription: "Descubre el Quiz de Banderas del Mundo: Pon a prueba tus conocimientos, adivina banderas, gana puntos en este quiz atractivo y educativo.",
+    ClearCashDescripcion: "Simplifica tus gastos con un acceso seguro, informes intuitivos y categorización fácil para inversiones, ropa, viajes, educación y más.",
     textAboutMe: "Soy un desarrollador web autodidacta apasionado por crear aplicaciones web innovadoras y fáciles de usar. Con un enfoque en el aprendizaje continuo, me mantengo actualizado con las últimas tecnologías para ofrecer soluciones personalizadas que generan resultados. Al combinar mis habilidades de front-end y back-end, transformo ideas en experiencias web visualmente atractivas. Colaboremos y hagamos realidad tu visión con soluciones digitales impactantes."
 }
