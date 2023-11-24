@@ -1,5 +1,5 @@
 export default {
-    portfolio: "Portfolio",
+    portfolio: "Ariel Valdés | Full-Stack Developer",
     about: "About Me",
     features: "Technologies",
     projects: "Projects",
